@@ -15,6 +15,10 @@
 		F9B1DC311DC787A1005987C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B1DC2F1DC787A1005987C7 /* LaunchScreen.storyboard */; };
 		F9B1DC3C1DC787A1005987C7 /* InstaCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC3B1DC787A1005987C7 /* InstaCloneTests.swift */; };
 		F9B1DC471DC787A1005987C7 /* InstaCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC461DC787A1005987C7 /* InstaCloneUITests.swift */; };
+		F9B1DC551DC79D84005987C7 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC541DC79D84005987C7 /* AuthenticationViewController.swift */; };
+		F9B1DC561DC79D84005987C7 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC541DC79D84005987C7 /* AuthenticationViewController.swift */; };
+		F9B1DC571DC79D84005987C7 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC541DC79D84005987C7 /* AuthenticationViewController.swift */; };
+		F9B1DC5A1DC7A0C1005987C7 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B1DC591DC7A0C1005987C7 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		F9B1DC421DC787A1005987C7 /* InstaCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B1DC461DC787A1005987C7 /* InstaCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneUITests.swift; sourceTree = "<group>"; };
 		F9B1DC481DC787A1005987C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9B1DC541DC79D84005987C7 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		F9B1DC591DC7A0C1005987C7 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B1DC5A1DC7A0C1005987C7 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,7 @@
 				F9B1DC3A1DC787A1005987C7 /* InstaCloneTests */,
 				F9B1DC451DC787A1005987C7 /* InstaCloneUITests */,
 				F9B1DC221DC787A0005987C7 /* Products */,
+				F9B1DC581DC7A0C1005987C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				F9B1DC241DC787A0005987C7 /* AppDelegate.swift */,
+				F9B1DC541DC79D84005987C7 /* AuthenticationViewController.swift */,
 				F9B1DC261DC787A0005987C7 /* FirstViewController.swift */,
 				F9B1DC281DC787A0005987C7 /* SecondViewController.swift */,
 				F9B1DC2A1DC787A1005987C7 /* Main.storyboard */,
@@ -126,6 +135,14 @@
 				F9B1DC481DC787A1005987C7 /* Info.plist */,
 			);
 			path = InstaCloneUITests;
+			sourceTree = "<group>";
+		};
+		F9B1DC581DC7A0C1005987C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9B1DC591DC7A0C1005987C7 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B1DC551DC79D84005987C7 /* AuthenticationViewController.swift in Sources */,
 				F9B1DC291DC787A0005987C7 /* SecondViewController.swift in Sources */,
 				F9B1DC251DC787A0005987C7 /* AppDelegate.swift in Sources */,
 				F9B1DC271DC787A0005987C7 /* FirstViewController.swift in Sources */,
@@ -275,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B1DC561DC79D84005987C7 /* AuthenticationViewController.swift in Sources */,
 				F9B1DC3C1DC787A1005987C7 /* InstaCloneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B1DC571DC79D84005987C7 /* AuthenticationViewController.swift in Sources */,
 				F9B1DC471DC787A1005987C7 /* InstaCloneUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
