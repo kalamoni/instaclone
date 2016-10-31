@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9B1DC251DC787A0005987C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC241DC787A0005987C7 /* AppDelegate.swift */; };
+		F9B1DC271DC787A0005987C7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC261DC787A0005987C7 /* FirstViewController.swift */; };
+		F9B1DC291DC787A0005987C7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC281DC787A0005987C7 /* SecondViewController.swift */; };
+		F9B1DC2C1DC787A1005987C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B1DC2A1DC787A1005987C7 /* Main.storyboard */; };
+		F9B1DC2E1DC787A1005987C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9B1DC2D1DC787A1005987C7 /* Assets.xcassets */; };
+		F9B1DC311DC787A1005987C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B1DC2F1DC787A1005987C7 /* LaunchScreen.storyboard */; };
+		F9B1DC3C1DC787A1005987C7 /* InstaCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC3B1DC787A1005987C7 /* InstaCloneTests.swift */; };
+		F9B1DC471DC787A1005987C7 /* InstaCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC461DC787A1005987C7 /* InstaCloneUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9B1DC381DC787A1005987C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9B1DC191DC787A0005987C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9B1DC201DC787A0005987C7;
+			remoteInfo = InstaClone;
+		};
+		F9B1DC431DC787A1005987C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9B1DC191DC787A0005987C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9B1DC201DC787A0005987C7;
+			remoteInfo = InstaClone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9B1DC211DC787A0005987C7 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9B1DC241DC787A0005987C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9B1DC261DC787A0005987C7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		F9B1DC281DC787A0005987C7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F9B1DC2B1DC787A1005987C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9B1DC2D1DC787A1005987C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9B1DC301DC787A1005987C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9B1DC321DC787A1005987C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9B1DC371DC787A1005987C7 /* InstaCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9B1DC3B1DC787A1005987C7 /* InstaCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneTests.swift; sourceTree = "<group>"; };
+		F9B1DC3D1DC787A1005987C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9B1DC421DC787A1005987C7 /* InstaCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9B1DC461DC787A1005987C7 /* InstaCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneUITests.swift; sourceTree = "<group>"; };
+		F9B1DC481DC787A1005987C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9B1DC1E1DC787A0005987C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9B1DC341DC787A1005987C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9B1DC3F1DC787A1005987C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9B1DC181DC787A0005987C7 = {
+			isa = PBXGroup;
+			children = (
+				F9B1DC231DC787A0005987C7 /* InstaClone */,
+				F9B1DC3A1DC787A1005987C7 /* InstaCloneTests */,
+				F9B1DC451DC787A1005987C7 /* InstaCloneUITests */,
+				F9B1DC221DC787A0005987C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9B1DC221DC787A0005987C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9B1DC211DC787A0005987C7 /* InstaClone.app */,
+				F9B1DC371DC787A1005987C7 /* InstaCloneTests.xctest */,
+				F9B1DC421DC787A1005987C7 /* InstaCloneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9B1DC231DC787A0005987C7 /* InstaClone */ = {
+			isa = PBXGroup;
+			children = (
+				F9B1DC241DC787A0005987C7 /* AppDelegate.swift */,
+				F9B1DC261DC787A0005987C7 /* FirstViewController.swift */,
+				F9B1DC281DC787A0005987C7 /* SecondViewController.swift */,
+				F9B1DC2A1DC787A1005987C7 /* Main.storyboard */,
+				F9B1DC2D1DC787A1005987C7 /* Assets.xcassets */,
+				F9B1DC2F1DC787A1005987C7 /* LaunchScreen.storyboard */,
+				F9B1DC321DC787A1005987C7 /* Info.plist */,
+			);
+			path = InstaClone;
+			sourceTree = "<group>";
+		};
+		F9B1DC3A1DC787A1005987C7 /* InstaCloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9B1DC3B1DC787A1005987C7 /* InstaCloneTests.swift */,
+				F9B1DC3D1DC787A1005987C7 /* Info.plist */,
+			);
+			path = InstaCloneTests;
+			sourceTree = "<group>";
+		};
+		F9B1DC451DC787A1005987C7 /* InstaCloneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9B1DC461DC787A1005987C7 /* InstaCloneUITests.swift */,
+				F9B1DC481DC787A1005987C7 /* Info.plist */,
+			);
+			path = InstaCloneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9B1DC201DC787A0005987C7 /* InstaClone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9B1DC4B1DC787A1005987C7 /* Build configuration list for PBXNativeTarget "InstaClone" */;
+			buildPhases = (
+				F9B1DC1D1DC787A0005987C7 /* Sources */,
+				F9B1DC1E1DC787A0005987C7 /* Frameworks */,
+				F9B1DC1F1DC787A0005987C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstaClone;
+			productName = InstaClone;
+			productReference = F9B1DC211DC787A0005987C7 /* InstaClone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9B1DC361DC787A1005987C7 /* InstaCloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9B1DC4E1DC787A1005987C7 /* Build configuration list for PBXNativeTarget "InstaCloneTests" */;
+			buildPhases = (
+				F9B1DC331DC787A1005987C7 /* Sources */,
+				F9B1DC341DC787A1005987C7 /* Frameworks */,
+				F9B1DC351DC787A1005987C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9B1DC391DC787A1005987C7 /* PBXTargetDependency */,
+			);
+			name = InstaCloneTests;
+			productName = InstaCloneTests;
+			productReference = F9B1DC371DC787A1005987C7 /* InstaCloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9B1DC411DC787A1005987C7 /* InstaCloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9B1DC511DC787A1005987C7 /* Build configuration list for PBXNativeTarget "InstaCloneUITests" */;
+			buildPhases = (
+				F9B1DC3E1DC787A1005987C7 /* Sources */,
+				F9B1DC3F1DC787A1005987C7 /* Frameworks */,
+				F9B1DC401DC787A1005987C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9B1DC441DC787A1005987C7 /* PBXTargetDependency */,
+			);
+			name = InstaCloneUITests;
+			productName = InstaCloneUITests;
+			productReference = F9B1DC421DC787A1005987C7 /* InstaCloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9B1DC191DC787A0005987C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = kalamoni;
+				TargetAttributes = {
+					F9B1DC201DC787A0005987C7 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ET2MEJ8BDQ;
+						ProvisioningStyle = Automatic;
+					};
+					F9B1DC361DC787A1005987C7 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ET2MEJ8BDQ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F9B1DC201DC787A0005987C7;
+					};
+					F9B1DC411DC787A1005987C7 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ET2MEJ8BDQ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F9B1DC201DC787A0005987C7;
+					};
+				};
+			};
+			buildConfigurationList = F9B1DC1C1DC787A0005987C7 /* Build configuration list for PBXProject "InstaClone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9B1DC181DC787A0005987C7;
+			productRefGroup = F9B1DC221DC787A0005987C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9B1DC201DC787A0005987C7 /* InstaClone */,
+				F9B1DC361DC787A1005987C7 /* InstaCloneTests */,
+				F9B1DC411DC787A1005987C7 /* InstaCloneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9B1DC1F1DC787A0005987C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9B1DC311DC787A1005987C7 /* LaunchScreen.storyboard in Resources */,
+				F9B1DC2E1DC787A1005987C7 /* Assets.xcassets in Resources */,
+				F9B1DC2C1DC787A1005987C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9B1DC351DC787A1005987C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9B1DC401DC787A1005987C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9B1DC1D1DC787A0005987C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9B1DC291DC787A0005987C7 /* SecondViewController.swift in Sources */,
+				F9B1DC251DC787A0005987C7 /* AppDelegate.swift in Sources */,
+				F9B1DC271DC787A0005987C7 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9B1DC331DC787A1005987C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9B1DC3C1DC787A1005987C7 /* InstaCloneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9B1DC3E1DC787A1005987C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9B1DC471DC787A1005987C7 /* InstaCloneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9B1DC391DC787A1005987C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9B1DC201DC787A0005987C7 /* InstaClone */;
+			targetProxy = F9B1DC381DC787A1005987C7 /* PBXContainerItemProxy */;
+		};
+		F9B1DC441DC787A1005987C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9B1DC201DC787A0005987C7 /* InstaClone */;
+			targetProxy = F9B1DC431DC787A1005987C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9B1DC2A1DC787A1005987C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9B1DC2B1DC787A1005987C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9B1DC2F1DC787A1005987C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9B1DC301DC787A1005987C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9B1DC491DC787A1005987C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9B1DC4A1DC787A1005987C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9B1DC4C1DC787A1005987C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ET2MEJ8BDQ;
+				INFOPLIST_FILE = InstaClone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kalamoni.InstaClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F9B1DC4D1DC787A1005987C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ET2MEJ8BDQ;
+				INFOPLIST_FILE = InstaClone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kalamoni.InstaClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F9B1DC4F1DC787A1005987C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ET2MEJ8BDQ;
+				INFOPLIST_FILE = InstaCloneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kalamoni.InstaCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstaClone.app/InstaClone";
+			};
+			name = Debug;
+		};
+		F9B1DC501DC787A1005987C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ET2MEJ8BDQ;
+				INFOPLIST_FILE = InstaCloneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kalamoni.InstaCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstaClone.app/InstaClone";
+			};
+			name = Release;
+		};
+		F9B1DC521DC787A1005987C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ET2MEJ8BDQ;
+				INFOPLIST_FILE = InstaCloneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kalamoni.InstaCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = InstaClone;
+			};
+			name = Debug;
+		};
+		F9B1DC531DC787A1005987C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ET2MEJ8BDQ;
+				INFOPLIST_FILE = InstaCloneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kalamoni.InstaCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = InstaClone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9B1DC1C1DC787A0005987C7 /* Build configuration list for PBXProject "InstaClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9B1DC491DC787A1005987C7 /* Debug */,
+				F9B1DC4A1DC787A1005987C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9B1DC4B1DC787A1005987C7 /* Build configuration list for PBXNativeTarget "InstaClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9B1DC4C1DC787A1005987C7 /* Debug */,
+				F9B1DC4D1DC787A1005987C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F9B1DC4E1DC787A1005987C7 /* Build configuration list for PBXNativeTarget "InstaCloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9B1DC4F1DC787A1005987C7 /* Debug */,
+				F9B1DC501DC787A1005987C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F9B1DC511DC787A1005987C7 /* Build configuration list for PBXNativeTarget "InstaCloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9B1DC521DC787A1005987C7 /* Debug */,
+				F9B1DC531DC787A1005987C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9B1DC191DC787A0005987C7 /* Project object */;
+}
