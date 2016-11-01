@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F98E03F71DC8A5DC007B0371 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B1DC591DC7A0C1005987C7 /* LocalAuthentication.framework */; };
+		F99A73F31DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */; };
+		F99A73F41DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */; };
+		F99A73F51DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */; };
 		F9B1DC251DC787A0005987C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC241DC787A0005987C7 /* AppDelegate.swift */; };
 		F9B1DC271DC787A0005987C7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC261DC787A0005987C7 /* FirstViewController.swift */; };
 		F9B1DC291DC787A0005987C7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC281DC787A0005987C7 /* SecondViewController.swift */; };
@@ -18,7 +22,6 @@
 		F9B1DC551DC79D84005987C7 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC541DC79D84005987C7 /* AuthenticationViewController.swift */; };
 		F9B1DC561DC79D84005987C7 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC541DC79D84005987C7 /* AuthenticationViewController.swift */; };
 		F9B1DC571DC79D84005987C7 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC541DC79D84005987C7 /* AuthenticationViewController.swift */; };
-		F9B1DC5A1DC7A0C1005987C7 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B1DC591DC7A0C1005987C7 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F9B1DC211DC787A0005987C7 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B1DC241DC787A0005987C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9B1DC261DC787A0005987C7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9B1DC5A1DC7A0C1005987C7 /* LocalAuthentication.framework in Frameworks */,
+				F98E03F71DC8A5DC007B0371 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +114,7 @@
 				F9B1DC241DC787A0005987C7 /* AppDelegate.swift */,
 				F9B1DC541DC79D84005987C7 /* AuthenticationViewController.swift */,
 				F9B1DC261DC787A0005987C7 /* FirstViewController.swift */,
+				F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */,
 				F9B1DC281DC787A0005987C7 /* SecondViewController.swift */,
 				F9B1DC2A1DC787A1005987C7 /* Main.storyboard */,
 				F9B1DC2D1DC787A1005987C7 /* Assets.xcassets */,
@@ -285,6 +290,7 @@
 				F9B1DC551DC79D84005987C7 /* AuthenticationViewController.swift in Sources */,
 				F9B1DC291DC787A0005987C7 /* SecondViewController.swift in Sources */,
 				F9B1DC251DC787A0005987C7 /* AppDelegate.swift in Sources */,
+				F99A73F31DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */,
 				F9B1DC271DC787A0005987C7 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F99A73F41DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */,
 				F9B1DC561DC79D84005987C7 /* AuthenticationViewController.swift in Sources */,
 				F9B1DC3C1DC787A1005987C7 /* InstaCloneTests.swift in Sources */,
 			);
@@ -302,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F99A73F51DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */,
 				F9B1DC571DC79D84005987C7 /* AuthenticationViewController.swift in Sources */,
 				F9B1DC471DC787A1005987C7 /* InstaCloneUITests.swift in Sources */,
 			);
@@ -540,6 +548,7 @@
 				F9B1DC4D1DC787A1005987C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9B1DC4E1DC787A1005987C7 /* Build configuration list for PBXNativeTarget "InstaCloneTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +557,7 @@
 				F9B1DC501DC787A1005987C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9B1DC511DC787A1005987C7 /* Build configuration list for PBXNativeTarget "InstaCloneUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +566,7 @@
 				F9B1DC531DC787A1005987C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
