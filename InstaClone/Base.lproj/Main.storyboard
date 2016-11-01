@@ -13,7 +13,6 @@
         <!--Profile-->
         <scene sceneID="a6h-JY-4oN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2dh-Mw-miq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="6iR-2J-EAA" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i7Y-hb-GMj"/>
@@ -48,8 +47,9 @@
                             <constraint firstItem="5cO-rx-23x" firstAttribute="centerX" secondItem="Wuf-sH-KFV" secondAttribute="centerX" id="mJy-qN-QF9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="first" id="OxC-jL-BHq"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profile-selected" id="OxC-jL-BHq"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2dh-Mw-miq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-530.39999999999998" y="-883.80809595202402"/>
         </scene>
@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notifications" image="second" id="n6K-Pn-Kgn"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="heart" selectedImage="heart-selected" id="n6K-Pn-Kgn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFE-iq-Nxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,7 +106,7 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="home" selectedImage="home-selected" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" image="first" id="toh-QD-6yI"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="camera" selectedImage="camera-selected" id="toh-QD-6yI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLj-dN-hgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,7 +162,7 @@
                             <constraint firstAttribute="trailing" secondItem="fDH-Zk-H23" secondAttribute="trailing" id="svn-dt-IR6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search" selectedImage="search-selected" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="fJu-hV-cdJ" id="xQl-E3-r15"/>
                     </connections>
@@ -413,10 +413,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="camera" width="40" height="40"/>
+        <image name="camera-selected" width="40" height="40"/>
+        <image name="heart" width="40" height="40"/>
+        <image name="heart-selected" width="40" height="40"/>
+        <image name="home" width="40" height="40"/>
+        <image name="home-selected" width="40" height="40"/>
         <image name="logo-text-black" width="1280" height="640"/>
         <image name="logo-text-white" width="1280" height="640"/>
-        <image name="second" width="30" height="30"/>
+        <image name="profile" width="40" height="40"/>
+        <image name="profile-selected" width="40" height="40"/>
+        <image name="search" width="40" height="40"/>
+        <image name="search-selected" width="40" height="40"/>
         <image name="touchid" width="290" height="290"/>
     </resources>
     <inferredMetricsTieBreakers>
