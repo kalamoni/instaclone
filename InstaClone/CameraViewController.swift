@@ -11,6 +11,7 @@ import UIKit
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
+    @IBOutlet var tagLabel: UILabel!
     @IBOutlet var imageToPost: UIImageView!
     
     var picker = UIImagePickerController()
@@ -57,7 +58,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
-
+            
         }
     }
     
@@ -68,7 +69,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
      */
     @IBAction func proceedToPost(_ sender: Any) {
         if imageToPost.image != nil {
-        self.performSegue(withIdentifier: "goToPost", sender: self)
+            self.performSegue(withIdentifier: "goToPost", sender: self)
         } else {
             let alert = UIAlertController(title: "Warning", message: "Please select an image first", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -85,6 +86,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
      */
     @IBAction func removePhoto(_ sender: Any) {
         imageToPost.image = nil
+        tagLabel.text = "..."
     }
     
     
@@ -96,18 +98,18 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func unwindToVC(segue: UIStoryboardSegue) {
     }
     
-    //MARK: - Delegates for UIImagePickerControllerDelegate
     
     /**
      This method is a delegate for UIImagePickerControllerDelegate to handle the selected image and show it
-
+     
      */
     func imagePickerController(_ picker: UIImagePickerController,
-                                        didFinishPickingMediaWithInfo info: [String : AnyObject]){
+                               didFinishPickingMediaWithInfo info: [String : AnyObject]){
         let chosenImage = info[UIImagePickerControllerEditedImage] as! UIImage
         imageToPost.contentMode = .scaleAspectFill
         imageToPost.image = chosenImage
         dismiss(animated:true, completion: nil)
+        tagLabel.text = "..."
         
     }
     
@@ -120,6 +122,30 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
+    
+    /**
+     This method is used to get the number of faces detected in the selected image
+     
+     - parameter sender: a reference to the button that has been touched
+     */
+    @IBAction func tagPeople(_ sender: Any) {
+        if imageToPost.image == nil {
+            let alert = UIAlertController(title: "Warning", message: "Please select an image first", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+            tagLabel.text = "..."
+        } else {
+            guard let personciImage = CIImage(image: imageToPost.image!) else {
+                return
+            }
+            let accuracy = [CIDetectorAccuracy: CIDetectorAccuracyHigh]
+            let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: accuracy)
+            let faces = faceDetector?.features(in: personciImage)
+            tagLabel.text = "\(faces!.count) people found."
+        }
+    }
+    
     /*
      // MARK: - Navigation
      
@@ -129,5 +155,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
      // Pass the selected object to the new view controller.
      }
      */
+    
     
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class PostViewController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet var locationTextView: UITextView!
+    @IBOutlet var tagTextView: UITextView!
     @IBOutlet var captionTextView: UITextView!
     @IBOutlet var imageToPost: UIImageView!
     
@@ -20,9 +22,15 @@ class PostViewController: UIViewController, UITextViewDelegate {
         
         captionTextView.text = "Write a caption..."
         captionTextView.textColor = UIColor.gray
+        locationTextView.textColor = UIColor.black
+        tagTextView.textColor = UIColor.black
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tap(gesture:)))
         view.addGestureRecognizer(tapGesture)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,13 +64,57 @@ class PostViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    /**
+     This method is used to dismiss the keyboard when touching the screen
+     
+     - parameter gesture: a reference to tapping on the screen
+     */
     func tap(gesture: UITapGestureRecognizer) {
         captionTextView.resignFirstResponder()
+        tagTextView.resignFirstResponder()
+        locationTextView.resignFirstResponder()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
+    
+    
+    
+    /**
+     This method is used to get the location of the user and print it to the location text view.
+     
+     - parameter sender: a reference to the button that has been touched
+     */
+    @IBAction func getLocation(_ sender: Any) {
+        
+    }
+    
+    
+    
+    /**
+     This method is used to move the view above the keyboard to show the text field being written to.
+     
+     - parameter notification: an observer for the notification center
+     */
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+        
+    }
+    
+    /**
+     This method is used to return the view to normal after the keyboard is dismissed.
+     
+     - parameter notification: an observer for the notification center
+     */
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
     }
     
     /*

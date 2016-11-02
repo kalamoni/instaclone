@@ -109,7 +109,11 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-        
+    /**
+     This method is used to dismiss the keyboard when touching the screen
+     
+     - parameter gesture: a reference to tapping on the screen
+     */
     func tap(gesture: UITapGestureRecognizer) {
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
