@@ -8,28 +8,90 @@
 
 import UIKit
 
-class CameraViewController: UIViewController {
-
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+    @IBOutlet var imageToPost: UIImageView!
+    
+    var picker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        picker.delegate = self
+        imageToPost.backgroundColor = UIColor(white: 0.9, alpha: 1)
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    /**
+     This method is used to pick up a photo from the user photo library
+     
+     - parameter sender: a reference to the button that has been touched
+     */
+    @IBAction func pickPhoto(_ sender: Any) {
+        picker.allowsEditing = true
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(picker, animated: true, completion: nil)
     }
-    */
+    
+    /**
+     This method is used to open the camera and it shows an alert if camera not available
+     
+     - parameter sender: a reference to the button that has been touched
+     */
+    @IBAction func openCamera(_ sender: Any) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            picker.sourceType = UIImagePickerControllerSourceType.camera;
+            picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .camera)!
+            picker.allowsEditing = true
+            self.present(picker, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Warning", message: "Camera is not available", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
 
+        }
+    }
+    
+    //MARK: - Delegates for UIImagePickerControllerDelegate
+    /**
+     This method is a delegate for UIImagePickerControllerDelegate to handle the selected image
+
+     */
+    func imagePickerController(_ picker: UIImagePickerController,
+                                        didFinishPickingMediaWithInfo info: [String : AnyObject]){
+        let chosenImage = info[UIImagePickerControllerEditedImage] as! UIImage
+        imageToPost.contentMode = .scaleAspectFill
+        imageToPost.image = chosenImage
+        dismiss(animated:true, completion: nil)
+        
+    }
+    
+    /**
+     This method is a delegate for UIImagePickerControllerDelegate to handle the cancelation of the picker view
+     
+     */
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

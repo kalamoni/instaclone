@@ -45,7 +45,7 @@ class AuthenticationViewController: UIViewController, UIAlertViewDelegate {
         var error:NSError?
         
         guard authenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
-            showAlert(title: "Error", message: "This device does not have a TouchID sensor.")
+            showAlert(title: "Warning", message: "This device does not have a TouchID sensor.")
             return
         }
         
@@ -61,7 +61,7 @@ class AuthenticationViewController: UIViewController, UIAlertViewDelegate {
                 }else {
                     // Check if there is an error
                     if let error = error {
-                        self.showAlert(title: "Error", message: error.localizedDescription)
+                        self.showAlert(title: "Warning", message: error.localizedDescription)
                     }
                 }
         })
@@ -78,10 +78,9 @@ class AuthenticationViewController: UIViewController, UIAlertViewDelegate {
     func showAlert(title:String, message:String ) {
         
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alertVC.addAction(okAction)
-        
+        self.present(alertVC, animated: true, completion: nil)
     }
     
 }
