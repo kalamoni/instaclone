@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import CoreLocation
 
-class PostViewController: UIViewController, UITextViewDelegate {
+class PostViewController: UIViewController, UITextViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var locationTextView: UITextView!
     @IBOutlet var tagTextView: UITextView!
     @IBOutlet var captionTextView: UITextView!
     @IBOutlet var imageToPost: UIImageView!
+    
+    var manager:CLLocationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,11 @@ class PostViewController: UIViewController, UITextViewDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
         
     }
     
@@ -76,17 +84,14 @@ class PostViewController: UIViewController, UITextViewDelegate {
     }
     
     
-    
-    
     /**
-     This method is used to get the location of the user and print it to the location text view.
+     This method is used to get the location of the user and print it to the location text view by resuming to monitor user location.
      
      - parameter sender: a reference to the button that has been touched
      */
     @IBAction func getLocation(_ sender: Any) {
-        
+        manager.startUpdatingLocation()
     }
-    
     
     
     /**
@@ -101,7 +106,6 @@ class PostViewController: UIViewController, UITextViewDelegate {
                 self.view.frame.origin.y -= keyboardSize.height
             }
         }
-        
     }
     
     /**
@@ -117,6 +121,56 @@ class PostViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        let alert = UIAlertController(title: "Warning", message: "Error while updating location: \(error.localizedDescription)", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let userLocation:CLLocation = locations[0]
+        
+        CLGeocoder().reverseGeocodeLocation(userLocation, completionHandler: { (placemarks, error) -> Void in
+            
+            if (error != nil) {
+                
+                let alert = UIAlertController(title: "Warning", message: "Error while updating location: \(error?.localizedDescription)", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okAction)
+                self.present(alert, animated: true, completion: nil)
+                
+            } else {
+                
+                if (placemarks?.count)! > 0 {
+                    let p = (placemarks?[0])! as CLPlacemark
+                    
+                    let subThoroughfare = (p.subThoroughfare != nil) ? (p.subThoroughfare! + ",") : ""
+                    let thoroughfare = (p.thoroughfare != nil) ? (p.thoroughfare! + ",") : ""
+                    let subLocality = (p.subLocality != nil) ? (p.subLocality! + ",") : ""
+                    let subAdministrativeArea = (p.subAdministrativeArea != nil) ? (p.subAdministrativeArea! + ",") : ""
+                    let postalCode = (p.postalCode != nil) ? (p.postalCode! + ",") : ""
+                    let country = (p.country != nil) ? p.country! : ""
+                    
+                    self.locationTextView
+                        .text = "\(subThoroughfare) \(thoroughfare) \(subLocality) \(subAdministrativeArea) \(postalCode)\(country)"
+                } else {
+                    
+                    let alert = UIAlertController(title: "Warning", message: "Error in GeoCoder: \(error?.localizedDescription)", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true, completion: nil)
+                    
+                }
+                
+            }
+        })
+        manager.stopUpdatingLocation()
+    }
+    
     /*
      // MARK: - Navigation
      
@@ -126,5 +180,6 @@ class PostViewController: UIViewController, UITextViewDelegate {
      // Pass the selected object to the new view controller.
      }
      */
+    
     
 }

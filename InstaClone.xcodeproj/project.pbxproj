@@ -14,6 +14,7 @@
 		F99A73F31DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */; };
 		F99A73F41DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */; };
 		F99A73F51DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */; };
+		F9A1AA9B1DCA5C0000C68FD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A1AA9A1DCA5C0000C68FD0 /* CoreLocation.framework */; };
 		F9B1DC251DC787A0005987C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC241DC787A0005987C7 /* AppDelegate.swift */; };
 		F9B1DC271DC787A0005987C7 /* FeedViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC261DC787A0005987C7 /* FeedViewControllerViewController.swift */; };
 		F9B1DC291DC787A0005987C7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B1DC281DC787A0005987C7 /* SearchViewController.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		F9821DAD1DC9DD1B004E34BC /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F9A1AA9A1DCA5C0000C68FD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F9B1DC211DC787A0005987C7 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B1DC241DC787A0005987C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9B1DC261DC787A0005987C7 /* FeedViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A1AA9B1DCA5C0000C68FD0 /* CoreLocation.framework in Frameworks */,
 				F98E03F71DC8A5DC007B0371 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +168,7 @@
 		F9B1DC581DC7A0C1005987C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9A1AA9A1DCA5C0000C68FD0 /* CoreLocation.framework */,
 				F9B1DC591DC7A0C1005987C7 /* LocalAuthentication.framework */,
 			);
 			name = Frameworks;

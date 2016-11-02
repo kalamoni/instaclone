@@ -263,7 +263,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzc-uw-R6Y">
                                 <rect key="frame" x="196" y="402" width="108" height="30"/>
-                                <state key="normal" title="Get my lcoation"/>
+                                <state key="normal" title="Get my location"/>
                                 <connections>
                                     <action selector="getLocation:" destination="oUL-tK-WOL" eventType="touchUpInside" id="bDv-us-AqK"/>
                                 </connections>

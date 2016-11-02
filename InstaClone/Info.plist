@@ -28,6 +28,8 @@
 	<string>Please press OK to access your media library</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Please press OK to access your camera</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow to get your location</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
