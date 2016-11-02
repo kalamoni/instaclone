@@ -78,7 +78,7 @@ class AuthenticationViewController: UIViewController, UIAlertViewDelegate {
     func showAlert(title:String, message:String ) {
         
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertVC.addAction(okAction)
         self.present(alertVC, animated: true, completion: nil)
     }

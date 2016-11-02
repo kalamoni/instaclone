@@ -54,16 +54,52 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             self.present(picker, animated: true, completion: nil)
         } else {
             let alert = UIAlertController(title: "Warning", message: "Camera is not available", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
 
         }
     }
     
-    //MARK: - Delegates for UIImagePickerControllerDelegate
     /**
-     This method is a delegate for UIImagePickerControllerDelegate to handle the selected image
+     This method is used to proceed with posting the image. And checks whether the user selected one. if not, it shows an alert telling him to pick one to proceed
+     
+     - parameter sender: a reference to the button that has been touched
+     */
+    @IBAction func proceedToPost(_ sender: Any) {
+        if imageToPost.image != nil {
+        self.performSegue(withIdentifier: "goToPost", sender: self)
+        } else {
+            let alert = UIAlertController(title: "Warning", message: "Please select an image first", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    /**
+     This method is used to remove the selected image
+     
+     - parameter sender: a reference to the button that has been touched
+     */
+    @IBAction func removePhoto(_ sender: Any) {
+        imageToPost.image = nil
+    }
+    
+    
+    /**
+     This method is used to unwind the segue to this view controller
+     
+     - parameter segue: a reference to the segue used
+     */
+    @IBAction func unwindToVC(segue: UIStoryboardSegue) {
+    }
+    
+    //MARK: - Delegates for UIImagePickerControllerDelegate
+    
+    /**
+     This method is a delegate for UIImagePickerControllerDelegate to handle the selected image and show it
 
      */
     func imagePickerController(_ picker: UIImagePickerController,

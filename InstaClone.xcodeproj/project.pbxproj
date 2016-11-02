@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9821DAE1DC9DD1B004E34BC /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9821DAD1DC9DD1B004E34BC /* PostViewController.swift */; };
+		F9821DAF1DC9DD1B004E34BC /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9821DAD1DC9DD1B004E34BC /* PostViewController.swift */; };
+		F9821DB01DC9DD1B004E34BC /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9821DAD1DC9DD1B004E34BC /* PostViewController.swift */; };
 		F98E03F71DC8A5DC007B0371 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B1DC591DC7A0C1005987C7 /* LocalAuthentication.framework */; };
 		F99A73F31DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */; };
 		F99A73F41DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */; };
@@ -51,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F9821DAD1DC9DD1B004E34BC /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F99A73F21DC8ACA100BEAFF8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F9B1DC211DC787A0005987C7 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B1DC241DC787A0005987C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 				F9B1DC261DC787A0005987C7 /* FeedViewControllerViewController.swift */,
 				F9B1DC281DC787A0005987C7 /* SearchViewController.swift */,
 				F9DCD8281DC8C144006DF421 /* CameraViewController.swift */,
+				F9821DAD1DC9DD1B004E34BC /* PostViewController.swift */,
 				F9DCD82C1DC8C180006DF421 /* NotificationsViewController.swift */,
 				F9DCD8301DC8C18B006DF421 /* ProfileViewController.swift */,
 				F9B1DC2A1DC787A1005987C7 /* Main.storyboard */,
@@ -302,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9821DAE1DC9DD1B004E34BC /* PostViewController.swift in Sources */,
 				F9B1DC551DC79D84005987C7 /* AuthenticationViewController.swift in Sources */,
 				F9B1DC291DC787A0005987C7 /* SearchViewController.swift in Sources */,
 				F9B1DC251DC787A0005987C7 /* AppDelegate.swift in Sources */,
@@ -319,6 +325,7 @@
 			files = (
 				F9DCD8321DC8C18B006DF421 /* ProfileViewController.swift in Sources */,
 				F9DCD82E1DC8C180006DF421 /* NotificationsViewController.swift in Sources */,
+				F9821DAF1DC9DD1B004E34BC /* PostViewController.swift in Sources */,
 				F99A73F41DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */,
 				F9DCD82A1DC8C144006DF421 /* CameraViewController.swift in Sources */,
 				F9B1DC561DC79D84005987C7 /* AuthenticationViewController.swift in Sources */,
@@ -332,6 +339,7 @@
 			files = (
 				F9DCD8331DC8C18B006DF421 /* ProfileViewController.swift in Sources */,
 				F9DCD82F1DC8C180006DF421 /* NotificationsViewController.swift in Sources */,
+				F9821DB01DC9DD1B004E34BC /* PostViewController.swift in Sources */,
 				F99A73F51DC8ACA100BEAFF8 /* LoginViewController.swift in Sources */,
 				F9DCD82B1DC8C144006DF421 /* CameraViewController.swift in Sources */,
 				F9B1DC571DC79D84005987C7 /* AuthenticationViewController.swift in Sources */,

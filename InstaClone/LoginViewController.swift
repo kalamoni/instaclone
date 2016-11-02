@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var loginButton: UIButton!
     
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var usernameTextField: UITextField!
     
     
     /**
@@ -30,6 +32,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tap(gesture:)))
+        view.addGestureRecognizer(tapGesture)
         
         loginButton.layer.cornerRadius = 5
         
@@ -104,6 +109,11 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+        
+    func tap(gesture: UITapGestureRecognizer) {
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
     
     /*
      // MARK: - Navigation

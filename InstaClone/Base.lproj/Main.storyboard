@@ -142,11 +142,14 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCx-LA-Sg0">
-                                <rect key="frame" x="262" y="35" width="35" height="30"/>
+                                <rect key="frame" x="269" y="35" width="35" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="proceedToPost:" destination="4O6-NU-BaO" eventType="touchUpInside" id="1Hz-pY-DrN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Goz-D2-9vu">
                                 <rect key="frame" x="16" y="460" width="100" height="30"/>
@@ -158,12 +161,24 @@
                                     <action selector="pickPhoto:" destination="4O6-NU-BaO" eventType="touchUpInside" id="sxO-zw-muA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7I-VA-rMU">
+                                <rect key="frame" x="16" y="35" width="105" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Remove Photo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="removePhoto:" destination="4O6-NU-BaO" eventType="touchUpInside" id="6cc-8e-U8b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Gwg-av-9jj" firstAttribute="top" secondItem="BCx-LA-Sg0" secondAttribute="bottom" constant="21" id="9vF-yp-qfC"/>
+                            <constraint firstItem="w7I-VA-rMU" firstAttribute="leading" secondItem="9ZP-sh-f4a" secondAttribute="leadingMargin" id="B3O-0e-N8u"/>
                             <constraint firstItem="Gwg-av-9jj" firstAttribute="leading" secondItem="9ZP-sh-f4a" secondAttribute="leading" constant="10" id="FvC-7T-tap"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BCx-LA-Sg0" secondAttribute="trailing" constant="7" id="J8W-ZA-wf2"/>
+                            <constraint firstItem="w7I-VA-rMU" firstAttribute="top" secondItem="OFn-n0-Bqo" secondAttribute="bottom" constant="15" id="HZB-6n-80v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BCx-LA-Sg0" secondAttribute="trailing" id="J8W-ZA-wf2"/>
                             <constraint firstItem="Gwg-av-9jj" firstAttribute="centerX" secondItem="9ZP-sh-f4a" secondAttribute="centerX" id="Nga-Lx-jzD"/>
                             <constraint firstItem="U5j-7h-1jQ" firstAttribute="trailing" secondItem="9ZP-sh-f4a" secondAttribute="trailingMargin" id="VBK-rV-YBO"/>
                             <constraint firstAttribute="trailing" secondItem="Gwg-av-9jj" secondAttribute="trailing" constant="10" id="lKR-I7-X6E"/>
@@ -176,11 +191,59 @@
                     <tabBarItem key="tabBarItem" title="Camera" image="camera" selectedImage="camera-selected" id="toh-QD-6yI"/>
                     <connections>
                         <outlet property="imageToPost" destination="Gwg-av-9jj" id="yjp-hp-oXQ"/>
+                        <segue destination="oUL-tK-WOL" kind="presentation" identifier="goToPost" id="UW1-1V-SLi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLj-dN-hgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1781.25" y="649.64788732394368"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="RaB-3l-IQS">
+            <objects>
+                <viewController id="oUL-tK-WOL" customClass="PostViewController" customModule="InstaClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nht-e9-7xM"/>
+                        <viewControllerLayoutGuide type="bottom" id="NJ6-U9-LbE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rNY-1X-JIu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8g-G9-zAv">
+                                <rect key="frame" x="16" y="35" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UjC-q8-jFs" kind="unwind" unwindAction="unwindToVCWithSegue:" id="j9i-CQ-M7n"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYd-ve-AbG">
+                                <rect key="frame" x="16" y="108" width="79" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Ffm-6k-Mmu">
+                                <rect key="frame" x="103" y="108" width="201" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="captionTextView" destination="Ffm-6k-Mmu" id="ErI-b6-Ygr"/>
+                        <outlet property="imageToPost" destination="OYd-ve-AbG" id="hV7-0X-Snj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NT9-CT-EFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UjC-q8-jFs" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2915.625" y="649.64788732394368"/>
         </scene>
         <!--Search-->
         <scene sceneID="wg7-f3-ORb">
@@ -456,6 +519,8 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="WMk-6C-Qeb" id="Q5g-aN-IsH"/>
+                        <outlet property="passwordTextField" destination="gNu-bN-nz7" id="aJk-fy-3dM"/>
+                        <outlet property="usernameTextField" destination="Qfg-s8-E1S" id="6gS-aE-weo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGc-cy-a3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
