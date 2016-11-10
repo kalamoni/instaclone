@@ -237,10 +237,11 @@
                                     <segue destination="UjC-q8-jFs" kind="unwind" unwindAction="unwindToVCWithSegue:" id="j9i-CQ-M7n"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OYd-ve-AbG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OYd-ve-AbG">
                                 <rect key="frame" x="16" y="108" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Db4-bx-b0X"/>
+                                    <constraint firstAttribute="width" secondItem="OYd-ve-AbG" secondAttribute="height" multiplier="1:1" id="N2h-z9-zeX"/>
                                     <constraint firstAttribute="width" constant="80" id="QwH-Ab-DUy"/>
                                 </constraints>
                             </imageView>

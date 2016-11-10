@@ -58,7 +58,7 @@ class AuthenticationViewController: UIViewController, UIAlertViewDelegate {
                 if(success) {
                     // Fingerprint recognized
                     self.performSegue(withIdentifier: "goToChat", sender: self)
-                }else {
+                } else {
                     // Check if there is an error
                     if let error = error {
                         self.showAlert(title: "Warning", message: error.localizedDescription)

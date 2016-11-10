@@ -104,7 +104,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
      
      */
     func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [String : AnyObject]){
+                               didFinishPickingMediaWithInfo info: [String : Any]){
         let chosenImage = info[UIImagePickerControllerEditedImage] as! UIImage
         imageToPost.contentMode = .scaleAspectFill
         imageToPost.image = chosenImage
@@ -156,5 +156,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
      }
      */
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPost" {
+            (segue.destination as! PostViewController).tempImage = self.imageToPost.image
+        }
+    }
     
 }
